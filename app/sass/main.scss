@@ -1,0 +1,310 @@
+/*RESET START*/
+@import "app/import/reset";
+/*RESET END*/
+body {position: relative; z-index: 0;}
+
+//SECTION FEEDBACK START
+section#feedback {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  visibility: hidden;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+section#main-feedback {
+  position: absolute;
+  top: 283px;
+  left: 35%;
+  width: 467px;
+  display: inline-block;
+  padding: 35px 63px 25px 63px;
+  visibility: hidden;
+  background: $w;
+  z-index: 2;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  i {
+    position: absolute;
+    top: -68px;
+    right: -72px;
+    padding: 23px 6px;
+    font-size: 72px;
+    background: $fnthead;
+    color: $w;
+    cursor: pointer;
+  }
+
+  h2 {
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 24px;
+    color: $h2;
+  }
+    form {
+  p.name-input {
+    //margin-top: 18px;
+    margin: 18px 0 8px 0;
+    text-align: center;
+  }
+    input.all {width: 100%; height: 40px;}
+
+  input[type="submit"] {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 17px;
+    text-transform: uppercase;
+    font-size: 17px;
+    color: $w;
+    background: $fnthead;
+    border: none;
+    cursor: pointer;
+  }
+  textarea {
+    width: 100%;
+    height: 140px;
+    margin-bottom: 20px;
+  }
+  }
+}
+//SECTION FEEDBACK END
+
+
+/*HEADER START*/
+section#header-top {
+  padding: 65px 0;
+  background: $header;
+}
+
+section.name-company {
+  display: inline-block;
+  width: 300px;
+  div.square {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin-right: 14px;
+    background: $fnthead;
+  }
+  p.name-bold {
+    margin-top: 20px;
+    font-weight: bold;
+    font-size: 16px;
+  }
+}
+
+section.phone {
+  p.tel {font-size: 40px; line-height: 50px;}
+  div.click-me {
+    margin-top: 20px;
+    justify-content: flex-end;
+    cursor: pointer;
+  p.feedback-click {
+    display: inline-block;
+    text-align: right;
+    font-weight: bold;
+    font-size: 24px;
+    border-bottom: 1px dashed #000;
+   }
+  }
+}
+
+nav {
+   padding: 26px 0;
+   background: rgba($fnthead, 0.8);
+    ul {
+    flex-wrap: wrap;
+        li {
+        padding: 0 23px;
+        border-right: 3px solid $w;
+        &:last-child  {padding-right: 0; border: none;}
+       a {
+         font-size: 25px;
+         color: $w;
+         // border-right: 3px solid $w;
+         &:hover {border-bottom: 3px solid $w;}
+      }
+    }
+  }
+}
+
+div.w3-content {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+    button {
+      position: absolute;
+      top: 40%;
+      padding: 13px 7px;
+      background: $btn;
+      font-size: 30px;
+      border: none;
+      cursor: pointer;
+      &.slide-prev {left: 19%;}
+      &.slide-next {right: 19%;}
+      }
+  }
+
+  // div.w3-center {
+  //   // position: absolute;
+  //   // top: 50%;
+  //   // left: 17%;
+  //   button.slide.next {position: absolute;right: 0;}
+  // }
+  img.mySlides {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: opacity 0.8s ease-in-out;
+    -o-transition: opacity 0.8s ease-in-out;
+    transition: opacity 0.8s ease-in-out;
+  }
+
+  .w3-red {background: red;}
+/*HEADER END*/
+
+/*MAIN START*/
+
+/*SECTION CONTENT START*/
+section#content {padding-top: 10px;}
+ ul.main {
+   flex-wrap: wrap;
+   li {
+     a:hover {border-bottom: 1px solid $mainfnt;}
+
+     i {
+       display: inline-block;
+       &.one {margin: 0 10px 0 5px;}
+       &.two {margin: 0 13px 0 5px;}
+     }
+   }
+ }
+/*SECTION CONTENT END*/
+
+/*SECTION MAIN CONTENT START*/
+div.main-catalog {
+  margin-top: 22px;
+  div.left-catalog {
+    margin-right: 21px;
+    div.item-catalog {
+      margin-bottom: 17px;
+    label {
+      cursor: pointer;
+      &:hover {border-bottom: 1px solid $mainfnt;}
+    }
+    input:checked ~ ul {height: 88px;}
+    ul {
+       height: 0;
+       transition: height 0.5s ease;
+      li {
+        margin-left: 20px;
+        list-style: disc;
+        a:hover {border-bottom: 1px solid $mainfnt;}
+      }
+     }
+    }
+
+    div.price {
+      width: 193px;
+      margin-top: 110px;
+      a.price-img {
+        display: block;
+        width: 97px;
+        height: 95px;
+        margin: 0 0 20px 37px;
+        background: url(../img/price.jpg) no-repeat;
+      }
+      p {
+        font-weight: bold;
+        font-size: 30px;
+      }
+    }
+  }
+
+  div.right-catalog {
+    div.products {
+      width: 250px;
+      height: 380px;
+      margin: 0 13px 13px 0;
+      padding: 20px;
+      background: $header;
+      div.image-wrapp {
+        display: block;
+        width: 211px;
+        height: 209px;
+      }
+      p.descr-prod {
+         margin: 20px 0 50px 0;
+        font-size: 16px;
+      }
+      div.money {
+        p {
+          display: inline-block;
+          font-weight: bold;
+          font-size: 28px;
+        }
+        i {
+          display: inline-block;
+          width: 28px;
+          height: 21px;
+          //margin-left: 105px;
+          background: url(../img/bascet.png) no-repeat;
+        }
+      }
+    }
+  }
+}
+/*SECTION MAIN CONTENT END*/
+
+/*NUMBERS START*/
+ div.numbers {
+   margin-bottom: 67px;
+   padding-top: 36px;
+   div.wrapp-numb {
+    justify-content: center;
+   p {
+     margin-right: 23px;
+     cursor: pointer;
+     &:first-child {margin-left: 24%;}
+     &:last-child{margin-right: 0;}
+     &:hover {font-size: 18px;}
+    }
+
+   }
+ }
+/*NUMBERS END*/
+
+//SECTION TEXT START
+section#text {padding-bottom: 200px;}
+ div.text-div {
+   padding-top: 30px;
+   border-top: 1px solid $fnthead;
+   & > div {
+     display: inline-block;
+     width: 400px;
+     text-align: left;
+   }
+ }
+//SECTION TEXT END
+/*MAIN END*/
+
+//FOOTER START
+ footer {
+   padding: 50px 0;
+   background: $fnthead;
+ }
+  div.main-footer {
+    justify-content: space-between;
+    p, a, u {color: $w;}
+    a:hover {border-bottom: 1px solid $w;}
+  }
+
+
+//FOOTER END

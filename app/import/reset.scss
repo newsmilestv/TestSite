@@ -1,0 +1,98 @@
+// IMPORT BEGINNER
+@import "app/import/variables";
+@import "app/import/mixin";
+@import "app/import/fonts";
+// IMPORT END
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font: 14px/22px $pt, sans-serif;
+  color: $mainfnt;
+}
+
+.flex {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+
+.inline-flex {
+  display: -webkit-inline-flex;
+  display: -moz-inline-flex;
+  display: -ms-inline-flex;
+  display: -o-inline-flex;
+  display: inline-flex;
+}
+
+.wrap {
+  flex-wrap: wrap;
+}
+
+.grid {
+  display: -webkit-grid;
+  display: -moz-grid;
+  display: -ms-grid;
+  display: -o-grid;
+  display: grid;
+}
+
+ol, ul {
+list-style: none;
+}
+ul li {
+list-style-type: none;
+}
+
+img {
+  max-width: 100%;
+}
+
+a, a:hover {
+text-decoration: none;
+//color: #000;
+}
+
+html {height: 100%;}
+
+body {
+  height: 100%;
+  //background-color: #fff;
+  //font: 16px $cr;
+  //color: #212121;
+}
+
+.left {
+float: left;
+}
+
+.right {
+float: right;
+}
+
+.overflow {
+  overflow: hidden;
+}
+
+.clearfix::before,
+.clearfix::after {
+content: " ";
+display: table;
+}
+.clearfix::after {clear: both;}
+
+.left {float: left;}
+.right {float: right;}
+
+.text-right {text-align: right;}
+.text-left {text-align: left;}
+
+.none {display: none;}
+.grid {display: grid;}
+
+.container {
+  margin: 0 auto;
+  max-width: 1010px;
+}
